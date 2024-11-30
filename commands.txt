@@ -1,0 +1,22 @@
+# Start Metasploit Framework
+msfconsole
+
+# Search for the appropriate module
+search ps
+
+# Use the post-exploit module to list running processes
+use post/linux/gather/ps
+
+# Set the session ID to interact with the target system
+set SESSION 1
+
+# Execute the module to gather processes
+run
+
+# Save the output
+spool process_list.txt
+
+# Stop spooling to save the output
+spool off
+
+
